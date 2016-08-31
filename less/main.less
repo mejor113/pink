@@ -37,6 +37,8 @@ body{
   }
 }
 
+
+
 .main-header{
   min-height:854px;
   background-image:url("../img/main-header-background.jpg");
@@ -57,6 +59,7 @@ body{
       height:40px;
       padding:0px;
       margin:0px;
+      margin-left:15px;
       background-image:url("../img/logo-header.png");
       background-repeat:no-repeat;
     }
@@ -109,7 +112,6 @@ body{
       font-weight:bold;
       color:white;
       padding:16px 30px;
-
     }
 
     button:active, button:focus{
@@ -141,10 +143,8 @@ body{
       margin-top:65px;
       padding-left:47px;
 
-
       .col-md-12>div{
         display:inline-block;
-
 
       }
       .apple{
@@ -169,8 +169,6 @@ body{
         width:44px;
         height:42px;
       }
-
-
     }
 
     .os-info{
@@ -186,13 +184,9 @@ body{
       background-repeat:no-repeat;
       background-position:center bottom;
     }
-
-
   }
-
-
-
 }
+
 
 .main-content{
 
@@ -266,7 +260,6 @@ body{
           line-height:186px;
           left:35px;
           position: inherit;
-
         }
       }
     }
@@ -301,7 +294,6 @@ body{
         text-decoration: none;
         opacity:0.3;
       }
-
     }
   }
 
@@ -336,7 +328,6 @@ body{
       margin-top:20px;
       color:@dark-blue;
     }
-
   }
 
   .prices{
@@ -413,7 +404,6 @@ body{
         bottom:15px;
         transform:rotate(-45deg);
       }
-
     }
 
 
@@ -477,7 +467,6 @@ body{
       margin:0px;
       background-image:url("../img/logo-footer.png");
       background-repeat:no-repeat;
-
     }
   }
 
@@ -527,7 +516,6 @@ body{
   .website-autor{
     padding-left:140px;
 
-
     a{
       font-size:18px;
       line-height:18px;
@@ -539,7 +527,6 @@ body{
       padding:16px 0px;
       width:135px;
       position: relative;
-
     }
 
     a:after{
@@ -552,7 +539,6 @@ body{
       background-position: center;
       top:13px;
       right:5px;
-
     }
 
     a:hover:after{
@@ -567,4 +553,72 @@ body{
   }
 
 
+}
+
+
+
+
+@media (min-width: @screen-sm-min) {
+
+  .navbar-default{
+
+    .navbar-toggle{
+      border:none;
+      border-radius:0px;
+      background-color:transparent;
+
+      .icon-bar{
+        width:50px;
+        height:4px;
+        margin-bottom:6px;
+        border-radius:0px;
+        background-color:white;
+      }
+
+      &:focus{
+        background-color:transparent;
+
+        .icon-bar{
+          background-color:white;
+        }
+      }
+
+      &:active{
+        background-color:transparent;
+
+        .icon-bar{
+          background-color:white;
+          opacity:0.3;
+        }
+      }
+
+      &:hover{
+        background-color:transparent;
+
+        .icon-bar{
+          background-color:@pink;
+        }
+      }
+    }
+
+    .in{
+      display:block;
+      position:relative;
+    }
+
+    .navbar-collapse{
+
+      border:0px;
+      border-top:2px solid transparent;
+
+
+      .navbar-nav{
+        border-top:1px solid green;
+
+        a{
+          background-color:@dark-blue;
+        }
+      }
+    }
+  }
 }
