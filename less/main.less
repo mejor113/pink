@@ -1,0 +1,570 @@
+@import "bootstrap/bootstrap.less";
+
+//COLORS
+@dark-blue:#283645;
+@pink:#d22856;
+@light-grey:#f2f2f2;
+@dark-grey:#dedede;
+
+
+body{
+  color:black;
+  font-family: 'Open Sans', sans-serif;
+
+  h2{
+    font-size:50px;
+    font-weight:lighter;
+  }
+
+  h3{
+    font-size:30px;
+    line-height:30px;
+    font-weight:bold;
+  }
+
+  h4{
+    font-size:24px;
+    line-height:30px;
+    font-weight:bold;
+  }
+
+  h5{
+    font-size:18px;
+    line-height:30px;
+    font-weight:bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+.main-header{
+  min-height:854px;
+  background-image:url("../img/main-header-background.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+  color:white;
+
+  .navbar{
+    background-color:rgba(0, 0, 0, 0.3);
+    height:110px;
+    border:none;
+    border-radius:0px;
+    padding-top:27px;
+    margin-bottom:0px;
+
+    .navbar-brand{
+      width:146px;
+      height:40px;
+      padding:0px;
+      margin:0px;
+      background-image:url("../img/logo-header.png");
+      background-repeat:no-repeat;
+    }
+
+    .navbar-nav a{
+      color:white;
+      font-size:18px;
+      line-height:18px;
+    }
+
+    .navbar-nav a:hover{
+      color:white;
+    }
+
+    .navbar-nav a:hover::after{
+      display:block;
+      position:relative;
+      content:"";
+      width:100%;
+      height:2px;
+      top:10px;
+      background-color:white;
+      opacity:1;
+    }
+
+    .navbar-nav a:active{
+      opacity:0.3;
+    }
+
+    .navbar-nav a:active::after{
+      opacity:0;
+    }
+
+  }
+
+  .header-content{
+    height:744px;
+    margin-top:0px;
+
+    .header-title{
+      margin:0;
+      margin-top:120px;
+      line-height:50px;
+    }
+
+    button{
+      margin-top:66px;
+      font-size:21px;
+      line-height:18px;
+      font-weight:bold;
+      color:white;
+      padding:16px 30px;
+
+    }
+
+    button:active, button:focus{
+      outline: none !important;
+    }
+    button::-moz-focus-inner{
+      border: 0 !important;
+    }
+
+    .btn{
+      background-color:rgba(0, 0, 0, 0);
+      border:3px solid white;
+      border-radius:30px;
+    }
+
+    .btn:hover{
+      background-color:white;
+      color:@pink;
+      box-shadow:0 5px 7px 0px rgba(0, 0, 0, 0.75);
+    }
+
+    .btn:active{
+      background-color:white;
+      color:lighten(@pink,30%);
+      box-shadow:none;
+    }
+
+    .app-os{
+      margin-top:65px;
+      padding-left:47px;
+
+
+      .col-md-12>div{
+        display:inline-block;
+
+
+      }
+      .apple{
+        background-image:url("../img/apple-logo.svg");
+        background-repeat:no-repeat;
+        width:46px;
+        height:57px;
+        margin-right:35px;
+      }
+
+      .android{
+        background-image:url("../img/android-logo.svg");
+        background-repeat:no-repeat;
+        width:42px;
+        height:47px;
+        margin-right:35px;
+      }
+
+      .windows{
+        background-image:url("../img/microsoft-logo.svg");
+        background-repeat:no-repeat;
+        width:44px;
+        height:42px;
+      }
+
+
+    }
+
+    .os-info{
+      font-size:18px;
+      line-height:24px;
+      font-weight:lighter;
+      margin-top:60px;
+    }
+
+    .app-preview{
+      height:744px;
+      background-image:url("../img/app-preview.png");
+      background-repeat:no-repeat;
+      background-position:center bottom;
+    }
+
+
+  }
+
+
+
+}
+
+.main-content{
+
+  .main-title{
+    margin-top:75px;
+    color:@dark-blue;
+  }
+
+  .app-dignity{
+
+    background-image:linear-gradient(354deg,@light-grey 82%,white 82%);
+    padding-bottom:65px;
+    .iphone-items{
+
+      margin-top:75px;
+
+      .iphone-item-1{
+        height:305px;
+        background-image:url("../img/iphone-item-1.png");;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+      }
+
+      .iphone-item-2{
+        height:305px;
+        background-image:url("../img/iphone-item-2.png");;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+      }
+
+      .iphone-item-3{
+        height:305px;
+        background-image:url("../img/iphone-item-3.png");;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+      }
+    }
+
+    .proposition-title{
+      margin-top:60px;
+    }
+
+    .proposition-of-description{
+      margin-top:30px;
+    }
+
+    .effect{
+      margin-top:60px;
+    }
+
+    .watch-case{
+      width:300px;
+      height:348px;
+      background-image:url("../img/timer-3.svg");
+      background-repeat:no-repeat;
+      background-position:center bottom;
+
+      .timer{
+        width:246px;
+        height:246px;
+        position:absolute;
+        border:16px solid @pink;
+        border-radius:123px;
+        bottom:27px;
+        left:27px;
+        color:@pink;
+
+        p{
+          font-size:120px;
+          font-weight:bold;
+          line-height:186px;
+          left:35px;
+          position: inherit;
+
+        }
+      }
+    }
+
+    .timer-effect{
+      padding-left:60px;
+
+      h3{
+        margin-top:100px;
+        line-height:30px;
+      }
+
+      p{
+        margin-top:30px;
+        font-size:18px;
+        line-height:30px;
+      }
+
+      a{
+        margin-top:30px;
+        font-size:18px;
+        line-height:45px;
+        text-decoration: underline;
+        color:@pink;
+      }
+
+      a:hover{
+        color:@dark-blue;
+      }
+
+      a:active{
+        text-decoration: none;
+        opacity:0.3;
+      }
+
+    }
+  }
+
+  .comments{
+    padding-bottom:0px;
+    .quotes{
+      background-image:url("../img/quotes.svg");
+      background-repeat:no-repeat;
+      background-position:center bottom;
+      width:80px;
+      height:65px;
+      margin:0 auto;
+      margin-top:75px;
+    }
+
+    .comments-text{
+      margin-top:60px;
+      font-size:18px;
+      line-height:30px;
+      color:@dark-blue;
+      padding-bottom:0px;
+    }
+
+    .autor-name{
+      margin-top:50px;
+      margin-bottom:0px;
+    }
+
+    .autor-age{
+      font-size:18px;
+      line-height:auto;
+      margin-top:20px;
+      color:@dark-blue;
+    }
+
+  }
+
+  .prices{
+    background-image:linear-gradient(356deg,@light-grey 76%,white 76%);
+    padding-top:150px;
+    padding-bottom:85px;
+
+    table{
+
+      tr td{
+        background-color:white;
+        padding:22px;
+        border-width:2px;
+        overflow:hidden;
+
+        p{
+          font-size:18px;
+          line-height:30px;
+          padding:0px;
+          margin:0px;
+          color:@dark-blue;
+        }
+      }
+
+      .none{
+        border-top-color: rgba(0,0,0,0);
+        border-left-color: rgba(0,0,0,0);
+        background-color:inherit;;
+      }
+
+      .top-line{
+        background-color:@dark-blue;
+        color:white;
+        text-transform: uppercase;
+        border-bottom-color: @dark-blue;
+        border-top-color: rgba(0,0,0,0);
+      }
+
+      .price{
+        font-size:24px;
+        font-weight:lighter;
+        line-height:30px;
+        padding:0px;
+        margin:0px;
+        color:white;
+      }
+
+      .yes{
+        background-image:url("../img/yes.svg");
+        background-repeat:no-repeat;
+        background-position:center center;
+      }
+
+      .no{
+        background-image:url("../img/no.svg");
+        background-repeat:no-repeat;
+        background-position:center center;
+      }
+
+      .hit{
+        position: relative;
+      }
+
+      .hit::before{
+        content: "ХИТ";
+        font-size: 14px;
+        line-height: 30px;
+        font-weight:lighter;
+        background-color: @pink;
+        display:block;
+        position: absolute;
+        padding:0px 70px;
+        right:85px;
+        bottom:15px;
+        transform:rotate(-45deg);
+      }
+
+    }
+
+
+
+  }
+
+  .map-block{
+
+    .map-title{
+      color:@dark-blue;
+      margin-top:80px;
+      margin-bottom: 0px;
+    }
+
+    .contact-title{
+      margin-top:75px;
+    }
+
+    p{
+      font-size:24px;
+      color:@pink;
+      margin-top:35px;
+      font-weight: lighter;
+
+      a{
+        color:@pink;
+        text-decoration:none;
+      }
+
+      a:hover{
+        color:@dark-blue;
+        text-decoration:underline;
+      }
+
+      a:active{
+        color:@dark-blue;
+        opacity:0.3;
+        text-decoration:none;
+      }
+    }
+
+    .google-map{
+      padding:0;
+    }
+  }
+
+}
+
+.main-footer{
+  padding-top: 75px;
+  padding-bottom: 75px;
+
+  .footer-hashtag{
+    height:40px;
+
+    .hashtag-link{
+      display: block;
+      width:146px;
+      height:40px;
+      padding:0px;
+      margin:0px;
+      background-image:url("../img/logo-footer.png");
+      background-repeat:no-repeat;
+
+    }
+  }
+
+  .footer-social{
+    height:50px;
+    padding:0px 60px;
+
+    .social-btn{
+      margin-right:13px;
+      display: inline-block;
+      vertical-align: top;
+      width: 50px;
+      height: 50px;
+      font-size: 0px;
+      border: 3px solid @dark-grey;
+      border-radius: 25px;
+    }
+
+    .social-btn:hover{
+      border-color:@dark-blue;
+    }
+
+    .social-btn:active{
+      opacity:0.3;
+    }
+
+    .social-btn-tw{
+      background-image: url("../img/twitter.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .social-btn-fb{
+      background-image: url("../img/facebook.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    .social-btn-yt{
+      margin-right:0px;
+      background-image: url("../img/youtube.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+
+  .website-autor{
+    padding-left:140px;
+
+
+    a{
+      font-size:18px;
+      line-height:18px;
+      color:@dark-blue;
+      text-decoration: none;
+      text-align: left;
+      height:50px;
+      display:block;
+      padding:16px 0px;
+      width:135px;
+      position: relative;
+
+    }
+
+    a:after{
+      content: "";
+      position: absolute;
+      width:28px;
+      height:30px;
+      background-image: url("../img/glukhanko.svg");
+      background-repeat: no-repeat;
+      background-position: center;
+      top:13px;
+      right:5px;
+
+    }
+
+    a:hover:after{
+      background-image: url("../img/glukhanko-hvr.svg");
+    }
+
+    a:active:after{
+      background-image: url("../img/glukhanko-hvr.svg");
+      opacity:0.3;
+    }
+
+  }
+
+
+}
