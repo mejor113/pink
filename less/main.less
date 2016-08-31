@@ -14,6 +14,7 @@ body{
   h2{
     font-size:50px;
     font-weight:lighter;
+    z-index:3;
   }
 
   h3{
@@ -68,121 +69,121 @@ body{
       color:white;
       font-size:18px;
       line-height:18px;
-    }
 
-    .navbar-nav a:hover{
-      color:white;
-    }
+      &:focus,&:hover{
+        color:white;
+      }
 
-    .navbar-nav a:hover::after{
-      display:block;
-      position:relative;
-      content:"";
-      width:100%;
-      height:2px;
-      top:10px;
-      background-color:white;
-      opacity:1;
-    }
+      &:hover::after{
+        display:block;
+        position:relative;
+        content:"";
+        width:100%;
+        height:2px;
+        top:10px;
+        background-color:white;
+        opacity:1;
+      }
 
-    .navbar-nav a:active{
-      opacity:0.3;
-    }
+      &:active{
+        opacity:0.3;
+      }
 
-    .navbar-nav a:active::after{
-      opacity:0;
+      &:active::after{
+        opacity:0;
+      }
     }
-
   }
 
   .header-content{
     height:744px;
     margin-top:0px;
 
-    .header-title{
-      margin:0;
-      margin-top:120px;
-      line-height:50px;
-    }
-
-    button{
-      margin-top:66px;
-      font-size:21px;
-      line-height:18px;
-      font-weight:bold;
-      color:white;
-      padding:16px 30px;
-    }
-
-    button:active, button:focus{
-      outline: none !important;
-    }
-    button::-moz-focus-inner{
-      border: 0 !important;
-    }
-
-    .btn{
-      background-color:rgba(0, 0, 0, 0);
-      border:3px solid white;
-      border-radius:30px;
-    }
-
-    .btn:hover{
-      background-color:white;
-      color:@pink;
-      box-shadow:0 5px 7px 0px rgba(0, 0, 0, 0.75);
-    }
-
-    .btn:active{
-      background-color:white;
-      color:lighten(@pink,30%);
-      box-shadow:none;
-    }
-
-    .app-os{
-      margin-top:65px;
-      padding-left:47px;
-
-      .col-md-12>div{
-        display:inline-block;
-
-      }
-      .apple{
-        background-image:url("../img/apple-logo.svg");
-        background-repeat:no-repeat;
-        width:46px;
-        height:57px;
-        margin-right:35px;
-      }
-
-      .android{
-        background-image:url("../img/android-logo.svg");
-        background-repeat:no-repeat;
-        width:42px;
-        height:47px;
-        margin-right:35px;
-      }
-
-      .windows{
-        background-image:url("../img/microsoft-logo.svg");
-        background-repeat:no-repeat;
-        width:44px;
-        height:42px;
-      }
-    }
-
-    .os-info{
-      font-size:18px;
-      line-height:24px;
-      font-weight:lighter;
-      margin-top:60px;
-    }
-
     .app-preview{
       height:744px;
       background-image:url("../img/app-preview.png");
       background-repeat:no-repeat;
-      background-position:center bottom;
+      background-position:320px bottom;
+
+      .header-title{
+        margin:0;
+        margin-top:120px;
+        line-height:50px;
+      }
+
+      button{
+        margin-top:66px;
+        font-size:21px;
+        line-height:18px;
+        font-weight:bold;
+        color:white;
+        padding:16px 30px;
+      }
+
+      button:active, button:focus{
+        outline: none !important;
+      }
+      button::-moz-focus-inner{
+        border: 0 !important;
+      }
+
+      .btn{
+        background-color:rgba(0, 0, 0, 0);
+        border:3px solid white;
+        border-radius:30px;
+      }
+
+      .btn:hover{
+        background-color:white;
+        color:@pink;
+        box-shadow:0 5px 7px 0px rgba(0, 0, 0, 0.75);
+      }
+
+      .btn:active{
+        background-color:white;
+        color:lighten(@pink,30%);
+        box-shadow:none;
+      }
+
+      .app-os{
+        margin-top:65px;
+        padding-left:47px;
+
+        .col-md-12>div{
+          display:inline-block;
+
+        }
+        .apple{
+          background-image:url("../img/apple-logo.svg");
+          background-repeat:no-repeat;
+          width:46px;
+          height:57px;
+          margin-right:35px;
+        }
+
+        .android{
+          background-image:url("../img/android-logo.svg");
+          background-repeat:no-repeat;
+          width:42px;
+          height:47px;
+          margin-right:35px;
+        }
+
+        .windows{
+          background-image:url("../img/microsoft-logo.svg");
+          background-repeat:no-repeat;
+          width:44px;
+          height:42px;
+        }
+      }
+
+      .os-info{
+        font-size:18px;
+        line-height:24px;
+        font-weight:lighter;
+        margin-top:60px;
+      }
+
     }
   }
 }
@@ -556,11 +557,10 @@ body{
 }
 
 
-
-
-@media (min-width: @screen-sm-min) {
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
 
   .navbar-default{
+    z-index:50;
 
     .navbar-toggle{
       border:none;
@@ -601,24 +601,71 @@ body{
       }
     }
 
-    .in{
-      display:block;
-      position:relative;
+    .navbar-form{
+      border-top:2px solid transparent;
     }
 
     .navbar-collapse{
-
+      box-shadow:none;
       border:0px;
       border-top:2px solid transparent;
-
+      position:relative;
+      top:30px;
 
       .navbar-nav{
-        border-top:1px solid green;
 
         a{
           background-color:@dark-blue;
+          text-transform:uppercase;
+          font-weight:bold;
+          text-align:  center;
+          border-bottom:1px solid black;
+          border-top:1px solid rgba(255, 255, 255, 0.1);
+          padding-top:25px;
+          padding-bottom:25px;
+
+          p{
+            margin:0;
+          }
+
+          &:focus{
+            background-color:@dark-blue;
+            color:white;
+          }
+
+          &:active{
+            background-color:@dark-blue;
+            color:@pink;
+            opacity:1;
+
+            p{
+              opacity:0.3;
+            }
+          }
+
+          &:hover{
+            background-color:@dark-blue;
+            color:@pink;
+
+            &:after{
+              display:none;
+            }
+
+          }
         }
       }
+    }
+  }
+
+
+  .header-content{
+    height:730px;
+
+    .app-preview{
+      height:730px;
+      background-image:url("../img/app-preview-700.png");
+      background-repeat:no-repeat;
+      background-position:left bottom;
     }
   }
 }
