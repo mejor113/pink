@@ -6748,10 +6748,8 @@ body h5 {
   margin-bottom: 0px;
 }
 .main-header {
-  min-height: 854px;
-  background-image: url("../img/main-header-background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  padding-bottom: 100px;
+  background: url("../img/iphone-hand-3@1x.png") no-repeat right bottom, url("../img/main-header-background.jpg") no-repeat center bottom;
   color: white;
 }
 .main-header .navbar {
@@ -6797,78 +6795,71 @@ body h5 {
   opacity: 0;
 }
 .main-header .header-content {
-  height: 744px;
   margin-top: 0px;
 }
-.main-header .header-content .app-preview {
-  height: 744px;
-  background-image: url("../img/app-preview.png");
-  background-repeat: no-repeat;
-  background-position: 320px bottom;
-}
-.main-header .header-content .app-preview .header-title {
+.main-header .header-content .header-title {
   margin: 0;
   margin-top: 120px;
   line-height: 50px;
 }
-.main-header .header-content .app-preview button {
-  margin-top: 66px;
+.main-header .header-content button {
+  margin-top: 65px;
   font-size: 21px;
   line-height: 18px;
   font-weight: bold;
   color: white;
   padding: 16px 30px;
 }
-.main-header .header-content .app-preview button:active,
-.main-header .header-content .app-preview button:focus {
+.main-header .header-content button:active,
+.main-header .header-content button:focus {
   outline: none !important;
 }
-.main-header .header-content .app-preview button::-moz-focus-inner {
+.main-header .header-content button::-moz-focus-inner {
   border: 0 !important;
 }
-.main-header .header-content .app-preview .btn {
+.main-header .header-content .btn {
   background-color: rgba(0, 0, 0, 0);
   border: 3px solid white;
   border-radius: 30px;
 }
-.main-header .header-content .app-preview .btn:hover {
+.main-header .header-content .btn:hover {
   background-color: white;
   color: #d22856;
   box-shadow: 0 5px 7px 0px rgba(0, 0, 0, 0.75);
 }
-.main-header .header-content .app-preview .btn:active {
+.main-header .header-content .btn:active {
   background-color: white;
   color: #eea5b9;
   box-shadow: none;
 }
-.main-header .header-content .app-preview .app-os {
+.main-header .header-content .app-os {
   margin-top: 65px;
   padding-left: 47px;
 }
-.main-header .header-content .app-preview .app-os .col-md-12 > div {
+.main-header .header-content .app-os .col-md-12 > div {
   display: inline-block;
 }
-.main-header .header-content .app-preview .app-os .apple {
+.main-header .header-content .app-os .apple {
   background-image: url("../img/apple-logo.svg");
   background-repeat: no-repeat;
   width: 46px;
   height: 57px;
   margin-right: 35px;
 }
-.main-header .header-content .app-preview .app-os .android {
+.main-header .header-content .app-os .android {
   background-image: url("../img/android-logo.svg");
   background-repeat: no-repeat;
   width: 42px;
   height: 47px;
   margin-right: 35px;
 }
-.main-header .header-content .app-preview .app-os .windows {
+.main-header .header-content .app-os .windows {
   background-image: url("../img/microsoft-logo.svg");
   background-repeat: no-repeat;
   width: 44px;
   height: 42px;
 }
-.main-header .header-content .app-preview .os-info {
+.main-header .header-content .os-info {
   font-size: 18px;
   line-height: 24px;
   font-weight: lighter;
@@ -6879,8 +6870,7 @@ body h5 {
   color: #283645;
 }
 .main-content .app-dignity {
-  background-image: linear-gradient(354deg, #f2f2f2 82%, white 82%);
-  padding-bottom: 65px;
+  background-image: linear-gradient(354deg, #f2f2f2 73%, white 73%);
 }
 .main-content .app-dignity .iphone-items {
   margin-top: 75px;
@@ -6907,58 +6897,64 @@ body h5 {
   margin-top: 60px;
 }
 .main-content .app-dignity .proposition-of-description {
+  font-size: 18px;
+  line-height: 30px;
   margin-top: 30px;
 }
-.main-content .app-dignity .effect {
-  margin-top: 60px;
+.main-content .timer-block {
+  padding-top: 65px;
+  background-color: #f2f2f2;
 }
-.main-content .app-dignity .watch-case {
-  width: 300px;
-  height: 348px;
+.main-content .timer-block .watch-case {
+  height: 345px;
   background-image: url("../img/timer-3.svg");
+  background-size: 100% 100%;
   background-repeat: no-repeat;
   background-position: center bottom;
+  position: relative;
 }
-.main-content .app-dignity .watch-case .timer {
+.main-content .timer-block .watch-case .dial {
   width: 246px;
   height: 246px;
-  position: absolute;
   border: 16px solid #d22856;
   border-radius: 123px;
   bottom: 27px;
-  left: 27px;
+  left: 35px;
   color: #d22856;
+  position: absolute;
 }
-.main-content .app-dignity .watch-case .timer p {
+.main-content .timer-block .watch-case .dial p {
   font-size: 120px;
   font-weight: bold;
   line-height: 186px;
   left: 35px;
-  position: inherit;
+  position: absolute;
 }
-.main-content .app-dignity .timer-effect {
+.main-content .timer-effect {
   padding-left: 60px;
 }
-.main-content .app-dignity .timer-effect h3 {
+.main-content .timer-effect h3 {
+  margin: 0px;
   margin-top: 100px;
   line-height: 30px;
 }
-.main-content .app-dignity .timer-effect p {
+.main-content .timer-effect p {
+  margin: 0px;
   margin-top: 30px;
+  margin-bottom: 30px;
   font-size: 18px;
   line-height: 30px;
 }
-.main-content .app-dignity .timer-effect a {
-  margin-top: 30px;
+.main-content .timer-effect a {
   font-size: 18px;
   line-height: 45px;
   text-decoration: underline;
   color: #d22856;
 }
-.main-content .app-dignity .timer-effect a:hover {
+.main-content .timer-effect a:hover {
   color: #283645;
 }
-.main-content .app-dignity .timer-effect a:active {
+.main-content .timer-effect a:active {
   text-decoration: none;
   opacity: 0.3;
 }
@@ -7057,11 +7053,11 @@ body h5 {
 }
 .main-content .map-block .map-title {
   color: #283645;
-  margin-top: 80px;
+  margin-top: 70px;
   margin-bottom: 0px;
 }
 .main-content .map-block .contact-title {
-  margin-top: 75px;
+  margin-top: 65px;
 }
 .main-content .map-block p {
   font-size: 24px;
@@ -7084,10 +7080,10 @@ body h5 {
 }
 .main-content .map-block .google-map {
   padding: 0;
+  height: 522px;
 }
 .main-footer {
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding: 75px 0;
 }
 .main-footer .footer-hashtag {
   height: 40px;
@@ -7101,11 +7097,12 @@ body h5 {
   background-image: url("../img/logo-footer.png");
   background-repeat: no-repeat;
 }
-.main-footer .footer-social {
-  height: 50px;
-  padding: 0px 60px;
+.main-footer .footer-social .footer-social-links {
+  margin: 0 auto;
+  display: block;
+  width: 188px;
 }
-.main-footer .footer-social .social-btn {
+.main-footer .footer-social .footer-social-links .social-btn {
   margin-right: 13px;
   display: inline-block;
   vertical-align: top;
@@ -7115,30 +7112,30 @@ body h5 {
   border: 3px solid #dedede;
   border-radius: 25px;
 }
-.main-footer .footer-social .social-btn:hover {
+.main-footer .footer-social .footer-social-links .social-btn:hover {
   border-color: #283645;
 }
-.main-footer .footer-social .social-btn:active {
+.main-footer .footer-social .footer-social-links .social-btn:active {
   opacity: 0.3;
 }
-.main-footer .footer-social .social-btn-tw {
+.main-footer .footer-social .footer-social-links .social-btn-tw {
   background-image: url("../img/twitter.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.main-footer .footer-social .social-btn-fb {
+.main-footer .footer-social .footer-social-links .social-btn-fb {
   background-image: url("../img/facebook.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
-.main-footer .footer-social .social-btn-yt {
+.main-footer .footer-social .footer-social-links .social-btn-yt {
   margin-right: 0px;
   background-image: url("../img/youtube.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 .main-footer .website-autor {
-  padding-left: 140px;
+  width: 135px;
 }
 .main-footer .website-autor a {
   font-size: 18px;
@@ -7171,6 +7168,28 @@ body h5 {
   opacity: 0.3;
 }
 @media (min-width: 660px) and (max-width: 969px) {
+  body h2 {
+    font-size: 40px;
+    font-weight: lighter;
+    z-index: 3;
+  }
+  body h3 {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+  }
+  body h4 {
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: bold;
+  }
+  body h5 {
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
   .navbar-default {
     z-index: 50;
   }
@@ -7247,13 +7266,128 @@ body h5 {
   .navbar-default .navbar-collapse .navbar-nav a:hover:after {
     display: none;
   }
-  .header-content {
-    height: 730px;
+  .main-header {
+    padding-bottom: 115px;
+    background: url("../img/iphone-hand-2@1x.png") no-repeat center bottom, url("../img/main-header-background.jpg") no-repeat center bottom;
+    color: white;
   }
-  .header-content .app-preview {
-    height: 730px;
-    background-image: url("../img/app-preview-700.png");
-    background-repeat: no-repeat;
-    background-position: left bottom;
+  .main-header .header-content .header-title {
+    margin-top: 100px;
+  }
+  .main-header .header-content button {
+    margin-top: 40px;
+  }
+  .main-header .header-content .app-os {
+    margin-top: 45px;
+  }
+  .main-content .app-dignity {
+    background-image: linear-gradient(354deg, #f2f2f2 82%, white 82%);
+  }
+  .main-content .app-dignity .iphone-items {
+    margin-top: 40px;
+  }
+  .main-content .app-dignity .meow {
+    height: 485px;
+    background: url("../img/iphone-screen-2-3@1x.png") no-repeat center bottom;
+  }
+  .main-content .app-dignity .proposition-title {
+    margin-top: 50px;
+    text-align: left;
+  }
+  .main-content .app-dignity .proposition-of-description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 12px;
+    margin-bottom: 0px;
+    text-align: left;
+  }
+  .main-content .timer-block {
+    padding-top: 60px;
+    background-color: white;
+  }
+  .main-content .timer-block .watch-case {
+    height: 305px;
+  }
+  .main-content .timer-block .watch-case .dial {
+    width: 214px;
+    height: 214px;
+    border-radius: 107px;
+    border-width: 13px;
+    left: 52px;
+  }
+  .main-content .timer-block .watch-case .dial p {
+    font-size: 104px;
+    line-height: 163px;
+  }
+  .main-content .timer-block .timer-effect h3 {
+    margin-top: 30px;
+    font-size: 30px;
+    line-height: 36px;
+  }
+  .main-content .timer-block .timer-effect p {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .main-content .timer-block .timer-effect a {
+    font-size: 14px;
+    line-height: 24px;
+  }
+  .main-content .comments .quotes {
+    display: none;
+  }
+  .main-content .comments .comments-text {
+    margin-top: 80px;
+  }
+  .main-content .comments .autor-name {
+    margin-top: 40px;
+  }
+  .main-content .comments .autor-age {
+    font-size: 14px;
+    line-height: 30px;
+    margin-top: 10px;
+  }
+  .main-content .prices {
+    padding-top: 100px;
+    background-image: linear-gradient(356deg, #f2f2f2 84%, white 84%);
+    padding-bottom: 70px;
+  }
+  .main-content .prices table tr td {
+    padding: 18px;
+  }
+  .main-content .prices table tr td p {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  .main-content .prices table .top-line {
+    padding-top: 14px;
+    padding-bottom: 14px;
+  }
+  .main-content .prices table .price {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  .main-content .prices table h5 {
+    line-height: 20px;
+  }
+  .main-content .map-block .map-title {
+    margin-top: 50px;
+  }
+  .main-content .map-block .contact-title {
+    margin-top: 55px;
+  }
+  .main-content .map-block p {
+    margin: 0;
+  }
+  .main-content .map-block .google-map {
+    height: 430px;
+    padding-top: 20px;
+  }
+  .main-footer {
+    padding: 35px 0;
+  }
+  .main-footer .footer-social {
+    padding: 0;
   }
 }

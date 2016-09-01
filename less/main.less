@@ -41,11 +41,13 @@ body{
 
 
 .main-header{
-  min-height:854px;
-  background-image:url("../img/main-header-background.jpg");
-  background-repeat:no-repeat;
-  background-size:cover;
+  padding-bottom:100px;
+  background:
+  url("../img/iphone-hand-3@1x.png") no-repeat right bottom,
+  url("../img/main-header-background.jpg") no-repeat center bottom ;
   color:white;
+
+
 
   .navbar{
     background-color:rgba(0, 0, 0, 0.3);
@@ -96,14 +98,8 @@ body{
   }
 
   .header-content{
-    height:744px;
-    margin-top:0px;
 
-    .app-preview{
-      height:744px;
-      background-image:url("../img/app-preview.png");
-      background-repeat:no-repeat;
-      background-position:320px bottom;
+    margin-top:0px;
 
       .header-title{
         margin:0;
@@ -112,7 +108,7 @@ body{
       }
 
       button{
-        margin-top:66px;
+        margin-top:65px;
         font-size:21px;
         line-height:18px;
         font-weight:bold;
@@ -183,8 +179,6 @@ body{
         font-weight:lighter;
         margin-top:60px;
       }
-
-    }
   }
 }
 
@@ -198,10 +192,9 @@ body{
 
   .app-dignity{
 
-    background-image:linear-gradient(354deg,@light-grey 82%,white 82%);
-    padding-bottom:65px;
-    .iphone-items{
+    background-image:linear-gradient(354deg,@light-grey 73%,white 73%);
 
+    .iphone-items{
       margin-top:75px;
 
       .iphone-item-1{
@@ -231,56 +224,66 @@ body{
     }
 
     .proposition-of-description{
+      font-size:18px;
+      line-height:30px;
       margin-top:30px;
     }
+  }
 
-    .effect{
-      margin-top:60px;
-    }
+  .timer-block{
+    padding-top:65px;
+    background-color: @light-grey;
 
     .watch-case{
-      width:300px;
-      height:348px;
-      background-image:url("../img/timer-3.svg");
-      background-repeat:no-repeat;
-      background-position:center bottom;
+        height:345px;
+        background-image:url("../img/timer-3.svg");
+        background-size: 100% 100%;
+        background-repeat:no-repeat;
+        background-position:center bottom;
+        position: relative;
 
-      .timer{
-        width:246px;
-        height:246px;
-        position:absolute;
-        border:16px solid @pink;
-        border-radius:123px;
-        bottom:27px;
-        left:27px;
-        color:@pink;
-
-        p{
-          font-size:120px;
-          font-weight:bold;
-          line-height:186px;
+        .dial{
+          width:246px;
+          height:246px;
+          border:16px solid @pink;
+          border-radius:123px;
+          bottom:27px;
           left:35px;
-          position: inherit;
+          color:@pink;
+          position: absolute;
+
+          p{
+            font-size:120px;
+            font-weight:bold;
+            line-height:186px;
+            left:35px;
+            position: absolute;
+
+          }
         }
       }
     }
+
+
 
     .timer-effect{
       padding-left:60px;
 
       h3{
+        margin:0px;
         margin-top:100px;
         line-height:30px;
       }
 
       p{
+        margin:0px;
         margin-top:30px;
+        margin-bottom:30px;
         font-size:18px;
         line-height:30px;
       }
 
       a{
-        margin-top:30px;
         font-size:18px;
         line-height:45px;
         text-decoration: underline;
@@ -296,10 +299,11 @@ body{
         opacity:0.3;
       }
     }
-  }
+
 
   .comments{
     padding-bottom:0px;
+
     .quotes{
       background-image:url("../img/quotes.svg");
       background-repeat:no-repeat;
@@ -356,7 +360,7 @@ body{
       .none{
         border-top-color: rgba(0,0,0,0);
         border-left-color: rgba(0,0,0,0);
-        background-color:inherit;;
+        background-color:inherit;
       }
 
       .top-line{
@@ -415,12 +419,12 @@ body{
 
     .map-title{
       color:@dark-blue;
-      margin-top:80px;
+      margin-top:70px;
       margin-bottom: 0px;
     }
 
     .contact-title{
-      margin-top:75px;
+      margin-top:65px;
     }
 
     p{
@@ -448,14 +452,14 @@ body{
 
     .google-map{
       padding:0;
+      height:522px;
     }
   }
 
 }
 
 .main-footer{
-  padding-top: 75px;
-  padding-bottom: 75px;
+  padding:75px 0;
 
   .footer-hashtag{
     height:40px;
@@ -472,50 +476,56 @@ body{
   }
 
   .footer-social{
-    height:50px;
-    padding:0px 60px;
 
-    .social-btn{
-      margin-right:13px;
-      display: inline-block;
-      vertical-align: top;
-      width: 50px;
-      height: 50px;
-      font-size: 0px;
-      border: 3px solid @dark-grey;
-      border-radius: 25px;
+    .footer-social-links{
+      margin:0 auto;
+      display:block;
+      width:188px;
+      .social-btn{
+        margin-right:13px;
+        display: inline-block;
+        vertical-align: top;
+        width: 50px;
+        height: 50px;
+        font-size: 0px;
+        border: 3px solid @dark-grey;
+        border-radius: 25px;
+      }
+
+      .social-btn:hover{
+        border-color:@dark-blue;
+      }
+
+      .social-btn:active{
+        opacity:0.3;
+      }
+
+      .social-btn-tw{
+        background-image: url("../img/twitter.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .social-btn-fb{
+        background-image: url("../img/facebook.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
+      .social-btn-yt{
+        margin-right:0px;
+        background-image: url("../img/youtube.svg");
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+
     }
 
-    .social-btn:hover{
-      border-color:@dark-blue;
-    }
 
-    .social-btn:active{
-      opacity:0.3;
-    }
-
-    .social-btn-tw{
-      background-image: url("../img/twitter.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .social-btn-fb{
-      background-image: url("../img/facebook.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
-
-    .social-btn-yt{
-      margin-right:0px;
-      background-image: url("../img/youtube.svg");
-      background-repeat: no-repeat;
-      background-position: center;
-    }
   }
 
   .website-autor{
-    padding-left:140px;
+    width:135px;
 
     a{
       font-size:18px;
@@ -557,7 +567,38 @@ body{
 }
 
 
-@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+@media (min-width: 660px) and (max-width: 969px) {
+
+//FONT SIZE
+body{
+  h2{
+    font-size:40px;
+    font-weight:lighter;
+    z-index:3;
+  }
+
+  h3{
+    font-size:18px;
+    line-height:24px;
+    font-weight:bold;
+  }
+
+  h4{
+    font-size:20px;
+    line-height:30px;
+    font-weight:bold;
+  }
+
+  h5{
+    font-size:16px;
+    line-height:30px;
+    font-weight:bold;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+}
+
+
 
   .navbar-default{
     z-index:50;
@@ -618,7 +659,7 @@ body{
           background-color:@dark-blue;
           text-transform:uppercase;
           font-weight:bold;
-          text-align:  center;
+          text-align:center;
           border-bottom:1px solid black;
           border-top:1px solid rgba(255, 255, 255, 0.1);
           padding-top:25px;
@@ -656,16 +697,184 @@ body{
       }
     }
   }
+  .main-header{
+    padding-bottom:115px;
+    background:
+    url("../img/iphone-hand-2@1x.png") no-repeat center bottom,
+    url("../img/main-header-background.jpg") no-repeat center bottom ;
+    color:white;
 
+    .header-content{
 
-  .header-content{
-    height:730px;
+      .header-title{
+        margin-top:100px;
+      }
 
-    .app-preview{
-      height:730px;
-      background-image:url("../img/app-preview-700.png");
-      background-repeat:no-repeat;
-      background-position:left bottom;
+      button{
+        margin-top:40px;
+      }
+
+      .app-os{
+        margin-top:45px;
+      }
     }
   }
+
+  .main-content{
+
+    .app-dignity{
+      background-image:linear-gradient(354deg,@light-grey 82%,white 82%);
+
+      .iphone-items{
+        margin-top:40px;
+      }
+
+      .meow{
+        height:485px;
+        background:url("../img/iphone-screen-2-3@1x.png") no-repeat center bottom ;
+
+      }
+
+      .proposition-title{
+        margin-top:50px;
+        text-align:left;
+      }
+      .proposition-of-description{
+        font-size:14px;
+        line-height:24px;
+        margin-top:12px;
+        margin-bottom:0px;
+        text-align:left;
+      }
+    }
+
+
+      .timer-block{
+        padding-top:60px;
+        background-color:white;
+
+        .watch-case{
+          height:305px;
+
+          .dial{
+            width:214px;
+            height:214px;
+            border-radius:107px;
+            border-width:13px;
+            left:52px;
+
+            p{
+              font-size:104px;
+              line-height:163px;
+            }
+          }
+        }
+
+        .timer-effect{
+
+          h3{
+            margin-top:30px;
+            font-size:30px;
+            line-height:36px;
+
+          }
+
+          p{
+            margin-top:20px;
+            margin-bottom:20px;
+            font-size:14px;
+            line-height:24px;
+          }
+
+          a{
+            font-size:14px;
+            line-height:24px;
+
+          }
+        }
+      }
+
+      .comments{
+
+        .quotes{
+          display:none;
+        }
+
+        .comments-text{
+          margin-top:80px;
+        }
+
+        .autor-name{
+          margin-top:40px;
+        }
+
+        .autor-age{
+          font-size:14px;
+          line-height:30px;
+          margin-top:10px;
+        }
+      }
+
+      .prices{
+        padding-top:100px;
+        background-image:linear-gradient(356deg,@light-grey 84%,white 84%);
+        padding-bottom:70px;
+
+        table{
+
+          tr td{
+            padding:18px;
+
+            p{
+              font-size:14px;
+              line-height: 16px;
+            }
+          }
+
+          .top-line{
+            padding-top:14px;
+            padding-bottom:14px;
+          }
+
+          .price{
+            font-size:18px;
+            line-height:22px;
+          }
+
+          h5{
+            line-height:20px;
+          }
+        }
+      }
+
+      .map-block{
+
+        .map-title{
+          margin-top:50px;
+        }
+
+          .contact-title{
+            margin-top:55px;
+          }
+
+          p{
+            margin:0;
+          }
+
+          .google-map{
+            height:430px;
+            padding-top:20px;
+          }
+      }
+    }
+
+
+    .main-footer{
+      padding:35px 0;
+
+      .footer-social{
+        padding:0;
+      }
+
+    }
 }
