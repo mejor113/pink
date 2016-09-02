@@ -10,6 +10,7 @@
 body{
   color:black;
   font-family: 'Open Sans', sans-serif;
+  min-width:480px;
 
   h2{
     font-size:50px;
@@ -143,33 +144,39 @@ body{
 
       .app-os{
         margin-top:65px;
-        padding-left:47px;
 
-        .col-md-12>div{
+        .app-os-logo>div{
           display:inline-block;
+          vertical-align:middle;
 
         }
-        .apple{
-          background-image:url("../img/apple-logo.svg");
-          background-repeat:no-repeat;
-          width:46px;
-          height:57px;
-          margin-right:35px;
-        }
 
-        .android{
-          background-image:url("../img/android-logo.svg");
-          background-repeat:no-repeat;
-          width:42px;
-          height:47px;
-          margin-right:35px;
-        }
+        .app-os-logo{
+          width:212px;
+          margin:0 auto;
 
-        .windows{
-          background-image:url("../img/microsoft-logo.svg");
-          background-repeat:no-repeat;
-          width:44px;
-          height:42px;
+          .apple{
+            background-image:url("../img/apple-logo.svg");
+            background-repeat:no-repeat;
+            width:46px;
+            height:57px;
+            margin-right:35px;
+          }
+
+          .android{
+            background-image:url("../img/android-logo.svg");
+            background-repeat:no-repeat;
+            width:42px;
+            height:47px;
+            margin-right:35px;
+          }
+
+          .windows{
+            background-image:url("../img/microsoft-logo.svg");
+            background-repeat:no-repeat;
+            width:44px;
+            height:42px;
+          }
         }
       }
 
@@ -877,4 +884,179 @@ body{
       }
 
     }
+}
+
+@media (max-width:659px) {
+
+//FONT SIZE
+  body{
+    h2{
+      font-size:24px;
+      z-index:3;
+    }
+
+    h3{
+      line-height: normal;
+    }
+
+    h4{
+      font-size:18px;
+      line-height: normal;
+    }
+
+    h5{
+      font-size:18px;
+      line-height: normal;
+    }
+  }
+
+  .main-header{
+    background:
+    url("../img/iphone-hand-1.png") no-repeat center 201px,
+    url("../img/main-header-background-small.jpg") no-repeat center top ;
+    background-color:@dark-blue;
+    padding-bottom:30px;
+
+    .navbar{
+      height:65px;
+      padding-top:21px;
+
+      .navbar-brand{
+        height:74px;
+        width:74px;
+        background-image:url("../img/Pink-logo-1.png");
+      }
+    }
+
+    .navbar-default{
+      z-index:50;
+
+      .navbar-toggle{
+        border:none;
+        border-radius:0px;
+        background-color:transparent;
+        padding-top:0;
+
+        .icon-bar{
+          width:50px;
+          height:4px;
+          margin-bottom:6px;
+          border-radius:0px;
+          background-color:white;
+        }
+
+        &:focus{
+          background-color:transparent;
+
+          .icon-bar{
+            background-color:white;
+          }
+        }
+
+        &:active{
+          background-color:transparent;
+
+          .icon-bar{
+            background-color:white;
+            opacity:0.3;
+          }
+        }
+
+        &:hover{
+          background-color:transparent;
+
+          .icon-bar{
+            background-color:@pink;
+          }
+        }
+      }
+
+      .navbar-form{
+        border-top:2px solid transparent;
+      }
+
+      .navbar-collapse{
+        box-shadow:none;
+        border:0px;
+        border-top:2px solid transparent;
+        position:relative;
+        top:10px;
+
+        .navbar-nav{
+
+          a{
+            background-color:@dark-blue;
+            text-transform:uppercase;
+            font-weight:bold;
+            text-align:center;
+            border-bottom:1px solid black;
+            border-top:1px solid rgba(255, 255, 255, 0.1);
+            padding-top:25px;
+            padding-bottom:25px;
+
+            p{
+              margin:0;
+            }
+
+            &:focus{
+              background-color:@dark-blue;
+              color:white;
+            }
+
+            &:active{
+              background-color:@dark-blue;
+              color:@pink;
+              opacity:1;
+
+              p{
+                opacity:0.3;
+              }
+            }
+
+            &:hover{
+              background-color:@dark-blue;
+              color:@pink;
+
+              &:after{
+                display:none;
+              }
+
+            }
+          }
+        }
+      }
+    }
+
+    .header-content{
+
+      .header-title{
+        margin-top:20px;
+        line-height:30px;
+
+        br{
+          display:none;
+        }
+        br:last-of-type{
+          display:block;
+        }
+      }
+
+      button{
+        margin-top:350px;
+      }
+
+      .app-os{
+        margin-top:30px;
+      }
+
+      .os-info{
+        font-size:14px;
+        line-height:24px;
+        margin-top:25px;
+      }
+    }
+  }
+
+
+
 }
