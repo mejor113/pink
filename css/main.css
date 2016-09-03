@@ -6724,7 +6724,6 @@ button.close {
 body {
   color: black;
   font-family: 'Open Sans', sans-serif;
-  min-width: 480px;
 }
 body h2 {
   font-size: 50px;
@@ -6874,6 +6873,12 @@ body h5 {
   margin-top: 75px;
   color: #283645;
 }
+.main-content .main-title .main-title-first-stroke {
+  margin: 0;
+}
+.main-content .main-title .main-title-first-stroke br:first-child {
+  display: none;
+}
 .main-content .app-dignity {
   background-image: linear-gradient(354deg, #f2f2f2 73%, white 73%);
 }
@@ -6905,6 +6910,9 @@ body h5 {
   font-size: 18px;
   line-height: 30px;
   margin-top: 30px;
+}
+.main-content .app-dignity .proposition-of-description br {
+  display: none;
 }
 .main-content .timer-block {
   padding-top: 65px;
@@ -6981,6 +6989,9 @@ body h5 {
   line-height: 30px;
   color: #283645;
   padding-bottom: 0px;
+}
+.main-content .comments .comments-text br {
+  display: none;
 }
 .main-content .comments .autor-name {
   margin-top: 50px;
@@ -7237,7 +7248,7 @@ body h5 {
     border: 0px;
     border-top: 2px solid transparent;
     position: relative;
-    top: 30px;
+    top: 9px;
   }
   .navbar-default .navbar-collapse .navbar-nav a {
     background-color: #283645;
@@ -7291,7 +7302,7 @@ body h5 {
   .main-content .app-dignity .iphone-items {
     margin-top: 40px;
   }
-  .main-content .app-dignity .meow {
+  .main-content .app-dignity .sm-iphone-image {
     height: 485px;
     background: url("../img/iphone-screen-2-3@1x.png") no-repeat center bottom;
   }
@@ -7469,7 +7480,7 @@ body h5 {
     border: 0px;
     border-top: 2px solid transparent;
     position: relative;
-    top: 10px;
+    top: -40px;
   }
   .main-header .navbar-default .navbar-collapse .navbar-nav a {
     background-color: #283645;
@@ -7523,5 +7534,75 @@ body h5 {
     font-size: 14px;
     line-height: 24px;
     margin-top: 25px;
+  }
+  .main-content .main-title {
+    margin-top: 45px;
+  }
+  .main-content .main-title .main-title-first-stroke {
+    margin-bottom: 35px;
+  }
+  .main-content .main-title .main-title-first-stroke br:first-child {
+    display: block;
+  }
+  .main-content .app-dignity {
+    padding-bottom: 320px;
+    background: url("../img/screen-1-3.png") no-repeat center bottom, linear-gradient(354deg, #f2f2f2 87%, white 87%);
+  }
+  .main-content .app-dignity .proposition-title {
+    font-size: 18px;
+    line-height: normal;
+  }
+  .main-content .app-dignity .proposition-of-description {
+    font-size: 14px;
+    line-height: 24px;
+    margin-top: 15px;
+  }
+  .main-content .app-dignity .proposition-of-description br {
+    display: block;
+  }
+  .main-content .timer-block {
+    display: none;
+  }
+  .main-content .comments .quotes {
+    display: none;
+  }
+  .main-content .comments .comments-text {
+    margin-top: 50px;
+    font-size: 14px;
+  }
+  .main-content .comments .comments-text br {
+    display: block;
+  }
+  .main-content .comments .autor-name {
+    margin-top: 25px;
+  }
+  .main-content .comments .autor-age {
+    display: none;
+  }
+  .main-content .prices {
+    background-image: linear-gradient(356deg, #f2f2f2 76%, white 76%);
+    padding-top: 150px;
+    padding-bottom: 85px;
+  }
+  .main-content .prices table {
+    display: none;
+  }
+  .main-content .map-block .map-title {
+    margin-top: 45px;
+  }
+  .main-content .map-block .contact-title {
+    margin-top: 35px;
+  }
+  .main-content .map-block p {
+    line-height: 26px;
+    margin: 0;
+    margin-top: 10px;
+  }
+  .main-content .map-block .google-map {
+    padding-top: 20px;
+    height: 220px;
+  }
+  .main-footer {
+    display: none;
   }
 }
