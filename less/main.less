@@ -362,6 +362,153 @@ body{
     background-image:linear-gradient(356deg,@light-grey 76%,white 76%);
     padding-top:150px;
     padding-bottom:85px;
+    overflow:hidden;
+
+    .xs-prices-table{
+      display:none;
+
+      .top-line{
+        padding:10px;
+        background-color:@dark-blue;
+        color:white;
+        text-transform: uppercase;
+        border-bottom-color: @dark-blue;
+        border-top-color: rgba(0,0,0,0);
+
+        p{
+          font-size:24px;
+          font-weight:lighter;
+          margin:0;
+        }
+      }
+
+      .hit{
+        position: relative;
+        overflow:hidden;
+      }
+
+      .hit::after{
+        z-index:1500;
+        content: "ХИТ";
+        font-size: 14px;
+        line-height: 30px;
+        font-weight:lighter;
+        background-color: @pink;
+        position: absolute;
+        padding:0px 70px;
+        left:-50px;
+        top:10px;
+        transform:rotate(-45deg);
+      }
+
+      .options-name{
+        background-color:white;
+        padding:22px;
+        overflow:hidden;
+        border:2px solid @dark-grey;
+        border-top:none;
+
+        p{
+          padding:0px;
+          margin:0px;
+          font-size:14px;
+          line-height:16px;
+          color:@dark-blue;
+          text-transform: uppercase;
+        }
+      }
+
+      .yes{
+        position:relative;
+      }
+      .yes:after{
+          content:"";
+          position:absolute;
+          width:30px;
+          height:30px;
+          right:22px;
+          top:16px;
+          background-image:url("../img/yes.svg");
+          background-repeat:no-repeat;
+          background-position:center center;
+      }
+
+      .no:after{
+          content:"";
+          position:absolute;
+          width:30px;
+          height:30px;
+          right:22px;
+          top:16px;
+          background-image:url("../img/no.svg");
+          background-repeat:no-repeat;
+          background-position:center center;
+      }
+    }
+
+    .xs-prices-table{
+      position:relative;
+      height:265px;
+
+      input{
+        display:none;
+      }
+
+     .controls {
+    	left: 50%;
+      width:74px;
+      margin:0;
+    	margin-left: -38px;
+
+    	position: absolute;
+      top:300px;
+
+        label {
+       	cursor: pointer;
+        position: relative;
+        background-color:@dark-grey;
+       	display: inline-block;
+        vertical-align:middle;
+       	height: 15px;
+       	width: 15px;
+        margin:0;
+        margin-right:10px;
+       	border-radius: 50%;
+       	transition:background ease-in-out .5s;
+
+          &:hover{
+            background-color:white;
+          }
+
+          &:last-child{
+            margin-right:0;
+          }
+        }
+      }
+
+      .slides{
+        position:absolute;
+        opacity:0;
+        transform: scale(1.5);
+        transition: transform ease-in-out .5s, opacity ease-in-out .5s;
+      }
+
+      #slide1:checked ~ .slider > .slide1,
+      #slide2:checked ~ .slider > .slide2,
+      #slide3:checked ~ .slider > .slide3 {
+        opacity: 1;
+        z-index: 1;
+        transform: scale(1);
+      }
+
+      #slide1:checked ~ .controls > label:nth-child(1),
+      #slide2:checked ~ .controls > label:nth-child(2),
+      #slide3:checked ~ .controls > label:nth-child(3),
+      {
+      	background-color: white;
+        border:2px solid @dark-blue;
+      }
+    }
 
     table{
 
@@ -1146,6 +1293,10 @@ body{
 
       table{
         display:none;
+      }
+
+      .xs-prices-table{
+        display:block;
       }
     }
 
