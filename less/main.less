@@ -72,12 +72,11 @@ body{
       color:white;
       font-size:18px;
       line-height:18px;
+      transition: opacity ease-in-out .3s;
 
-      &:focus,&:hover{
-        color:white;
-      }
-
-      &:hover::after{
+      &:after{
+        transform:translateY(10px);
+        opacity:0;
         display:block;
         position:relative;
         content:"";
@@ -85,6 +84,16 @@ body{
         height:2px;
         top:10px;
         background-color:white;
+        transition: transform ease-in-out .3s, opacity ease-in-out .3s;
+
+      }
+
+      &:focus,&:hover{
+        color:white;
+      }
+
+      &:hover:after{
+        transform:translateY(0px);
         opacity:1;
       }
 
@@ -92,8 +101,8 @@ body{
         opacity:0.3;
       }
 
-      &:active::after{
-        opacity:0;
+      &:active:after{
+        opacity:0.3;
       }
     }
   }
@@ -128,6 +137,7 @@ body{
         background-color:rgba(0, 0, 0, 0);
         border:3px solid white;
         border-radius:30px;
+        transition: background-color ease-in .4s, color ease-in .4s ,box-shadow ease-in .3s;
       }
 
       .btn:hover{
@@ -487,6 +497,7 @@ body{
       }
 
       .slides{
+        width:100%;
         position:absolute;
         opacity:0;
         transform: scale(1.5);
@@ -660,6 +671,7 @@ body{
         font-size: 0px;
         border: 3px solid @dark-grey;
         border-radius: 25px;
+        transition: border-color ease-in-out .3s, opacity ease-in-out .3s  ;
       }
 
       .social-btn:hover{
@@ -785,6 +797,7 @@ body{
         margin-bottom:6px;
         border-radius:0px;
         background-color:white;
+        transition: background-color ease-in-out .5s , opacity ease-in-out .3s ;
       }
 
       &:focus{
@@ -792,6 +805,7 @@ body{
 
         .icon-bar{
           background-color:white;
+
         }
       }
 
@@ -836,6 +850,11 @@ body{
           border-top:1px solid rgba(255, 255, 255, 0.1);
           padding-top:25px;
           padding-bottom:25px;
+          transition: color ease-in-out .3s ;
+
+          &:after{
+          display:none;
+          }
 
           p{
             margin:0;
@@ -853,17 +872,13 @@ body{
 
             p{
               opacity:0.3;
+              transition: opacity ease-in-out .3s ;
             }
           }
 
           &:hover{
             background-color:@dark-blue;
             color:@pink;
-
-            &:after{
-              display:none;
-            }
-
           }
         }
       }
@@ -997,6 +1012,12 @@ body{
           tr td{
             padding:18px;
 
+            .hit:before{
+              line-height: 20px;
+              right: 30px;
+              bottom: 10px;
+            }
+
             p{
               font-size:14px;
               line-height: 16px;
@@ -1108,6 +1129,7 @@ body{
           margin-bottom:6px;
           border-radius:0px;
           background-color:white;
+          transition: background-color ease-in-out .5s , opacity ease-in-out .3s ;
         }
 
         &:focus{
@@ -1158,9 +1180,15 @@ body{
             border-top:1px solid rgba(255, 255, 255, 0.1);
             padding-top:25px;
             padding-bottom:25px;
+            transition: color ease-in-out .3s ;
+
+            &:after{
+              display:none;
+            }
 
             p{
               margin:0;
+              transition: opacity ease-in-out .3s ;
             }
 
             &:focus{
@@ -1181,10 +1209,6 @@ body{
             &:hover{
               background-color:@dark-blue;
               color:@pink;
-
-              &:after{
-                display:none;
-              }
 
             }
           }
