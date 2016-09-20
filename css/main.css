@@ -7040,7 +7040,7 @@ body h5 {
 }
 .main-content .prices .xs-prices-table .hit::after {
   z-index: 1500;
-  content: "ХИТ";
+  content: "HIT";
   font-size: 14px;
   line-height: 30px;
   font-weight: lighter;
@@ -7192,7 +7192,7 @@ body h5 {
   position: relative;
 }
 .main-content .prices table .hit::before {
-  content: "ХИТ";
+  content: "HIT";
   font-size: 14px;
   line-height: 30px;
   font-weight: lighter;
