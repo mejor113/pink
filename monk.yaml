@@ -1,0 +1,30 @@
+namespace: pink
+
+static-frontend:
+  defines: runnable
+  metadata:
+    name: static-frontend
+    description: >-
+      A static frontend website that can be served using a web server like
+      nginx.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    static-frontend:
+      image: env-3531.registry.local/static-frontend:master-1f62652
+      build: .
+      dockerfile: Dockerfile.static-frontend
+  services:
+    http:
+      description: Standard HTTP port for web traffic
+      container: static-frontend
+      port: 80
+      host-port: 80
+      publish: true
+      protocol: tcp
+  connections: {}
+  variables: {}
+
+stack:
+  defines: group
+  members:
+    - pink/static-frontend
